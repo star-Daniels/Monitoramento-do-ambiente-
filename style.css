@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h2,p,button{
+    color: #BABABA;
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/umbrel.jpg);
+    background-size: cover;
+
+}
+
+.container_main{
+    display: flex;
+    flex-direction: row;
+}
+
+.container_temperatura{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    margin: 1rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 2rem;
+}
+
+#temperatura{
+    margin: 1rem;
+    font-size: 5rem;
+}
+
+#temperatura_aviso{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+
+}
+.container_informacoes{
+    width: 15rem;
+    height: 15rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 50%;
+    right: 10%;
+    
+
+    
+    
+    backdrop-filter: blur( 13.5px );
+    
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.073);
+
+    
+}
+
+
+    
+
+.informacoes{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+}
+.text_informacao{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-width: 5rem;
+
+}
+
+
+
+
+
+.container_btn{
+    margin: 01rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+
+}
+
+.btn_ventilacao{
+    padding: 1rem;
+    width: auto;
+    backdrop-filter: blur(10px);
+    background-color: #00000025;
+    
+    border: none;
+    border-radius: 10px;
+    
+
+}
