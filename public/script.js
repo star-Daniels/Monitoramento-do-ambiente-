@@ -60,7 +60,7 @@ onValue(ambienteRef, (snapshot) => {
             document.body.style.backgroundImage = "url('images/casa_fria2.jpg')";
         }
 
-    } else if(temperatura >= 10 && temperatura <= 25){
+    } else if(temperatura >= 10 && temperatura <= 34){
         document.getElementById("temperatura_aviso").textContent = "Normal"
         
 

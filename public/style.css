@@ -121,3 +121,30 @@ h2,p,button{
     
     
 }
+
+@media (max-width: 640px) {
+    .container_main{
+        flex-direction: column;
+        
+        align-items: center;
+    }
+
+    .container_temperatura{
+        position: static;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        background-color: #807f7f5c;
+        backdrop-filter: blur( 11.5px );
+        border-radius: 20px;
+        padding-right: 1rem;
+
+        
+    } 
+
+    .container_informacoes{
+        position: static;
+        margin:0;
+        
+    }
+  
+}
