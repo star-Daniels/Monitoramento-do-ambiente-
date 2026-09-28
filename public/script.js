@@ -28,13 +28,18 @@ console.log("Firebase inicializado!");
 const ambienteRef = ref(database, "ambiente");
 
 const botaoAr = document.getElementById("btn_ventilacao");
+const input_temperatura_ventilacao = document.getElementById("temperatura_ventilacao")
+
 let estadoAtual = false
+
+
 
 
 onValue(ambienteRef, (snapshot) => {
     const dados = snapshot.val();
     const temperatura = dados.temperatura
     const umidade = dados.umidade
+    
     estadoAtual = dados.ar
 
     const hci =
@@ -46,6 +51,9 @@ onValue(ambienteRef, (snapshot) => {
     document.getElementById("temperatura").textContent = temperatura +"°"
     document.getElementById("umidade").textContent = umidade + "%"
     document.getElementById("hci").textContent = hci.toFixed(1);
+    
+    
+
 
     
 
@@ -55,9 +63,11 @@ onValue(ambienteRef, (snapshot) => {
 
         if((Math.floor(Math.random() * 2)) == 1){
             document.body.style.backgroundImage = "url('images/casa_fria1.jpg')";
+            
 
         } else{
             document.body.style.backgroundImage = "url('images/casa_fria2.jpg')";
+            
         }
 
     } else if(temperatura >= 10 && temperatura <= 34){
@@ -68,24 +78,28 @@ onValue(ambienteRef, (snapshot) => {
 
         if((Math.floor(Math.random() * 2)) == 1){
             document.body.style.backgroundImage = "url('images/casa_normal1.jpg')";
+            
 
         } else{
             document.body.style.backgroundImage = "url('images/casa_normal2.jpg')";
         }
     } else{
-        document.getElementById("temperatura_aviso").textContent = "Quente"
+        document.getElementById("temperatura_aviso").textContent = "Quente";
         document.querySelectorAll("h2, button,p").forEach(el => el.style.color = "#ffffff");
         document.body.style.backgroundImage = "url('images/casa_quente1.jpg')";
     }
     
 
     if (dados.ar){
-        document.getElementById("ar").textContent = "ON"
-        document.getElementById("btn_ventilacao").textContent = "DESLIGAR"
+        document.getElementById("ar").textContent = "ON";
+        document.getElementById("btn_ventilacao").textContent = "DESLIGAR";
+        document.getElementById("container_temperatura_ventilacao").style.display = '';
 
     } else{
-        document.getElementById("ar").textContent = "OFF"
-        document.getElementById("btn_ventilacao").textContent = "LIGAR"
+        document.getElementById("ar").textContent = "OFF";
+        document.getElementById("btn_ventilacao").textContent = "LIGAR";
+        document.getElementById("container_temperatura_ventilacao").style.display = 'none';
+        
     }
 
     
@@ -97,11 +111,18 @@ onValue(ambienteRef, (snapshot) => {
 
 botaoAr.addEventListener("click", () => {
 
-  
-
   update(ambienteRef, {
     ar: !estadoAtual
   });
 
+});
+
+input_temperatura_ventilacao.addEventListener("change",()=>{
+
+    const temp_selecionada = Number(input_temperatura_ventilacao.value);
+
+    update(ambienteRef,{
+        ventilacaoTemperatura: temp_selecionada
+    });
 });
 

@@ -1,150 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
 
-body{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    background-size: cover;
-}
-h2,p,button{
-    color: #BABABA;
-    font-family: "Hammersmith One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
 }
 
 
+h2,p,button {
+  color: #bababa;
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-.container_main{
+.container_main {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_temperatura {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 2rem;
+}
+
+#temperatura {
+  margin: 1rem;
+  font-size: 5rem;
+}
+
+#temperatura_aviso {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.container_informacoes {
+  width: 15rem;
+  height: 15rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  transform: translateY(50%);
+  bottom: 50%;
+  right: 10%;
+
+  backdrop-filter: blur(13.5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.073);
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.text_informacao {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  min-width: 5rem;
+}
+
+.container_btn {
+  margin: 01rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn_ventilacao {
+  padding: 1rem;
+  width: 10rem;
+  margin-top: 1rem;
+
+  background-color: #0d0d0d32;
+
+  backdrop-filter: blur(13.5px);
+  border-radius: 20px;
+  border: 1px solid #ffffff13;
+}
+
+.btn_ventilacao:hover {
+  background-color: #1919192a;
+}
+
+#container_temperatura_ventilacao{
     display: flex;
     flex-direction: row;
-}
-
-.container_temperatura{
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    margin: 1rem;
-    padding: 0.5rem;
-    position: absolute;
-    bottom: 2rem;
-}
-
-#temperatura{
-    margin: 1rem;
-    font-size: 5rem;
-}
-
-#temperatura_aviso{
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-
-}
-.container_informacoes{
     width: 15rem;
-    height: 15rem;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    
+    padding: 0.5rem;
+    justify-content: space-between;
     position: absolute;
-    transform: translateY(50%);
-    bottom: 50%;
-    right: 10%;
-
-    backdrop-filter: blur( 13.5px );
+    bottom: 8rem;
+    right: 9.3%;
+    backdrop-filter: blur(13.5px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.073);
-
-    
 }
 
-
-
-.informacoes{
-    display: flex;
-    flex-direction: row;
-   justify-content: center;
-}
-.text_informacao{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    min-width: 5rem;
-    
-
-}
-
-
-
-
-
-.container_btn{
-    margin: 01rem;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    
-
-}
-
-.btn_ventilacao{
-    padding: 1rem;
-    width: 10rem;
-    margin-top: 1rem;
-    
-    
+#temperatura_ventilacao{
     background-color: #0d0d0d32;
-
-    backdrop-filter: blur( 13.5px );
-    border-radius: 20px;
-    border: 1px solid #ffffff13;
-
-    
-    
-
-}
-
-.btn_ventilacao:hover{
-
-    background-color: #1919192a;
-
-    
-    
+    color: #bababa;
+    padding: 0rem;
+    backdrop-filter: blur(13.5px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.073);
+    justify-items: center;
 }
 
 @media (max-width: 640px) {
-    .container_main{
-        flex-direction: column;
-        
-        align-items: center;
-    }
+  .container_main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .container_temperatura{
-        position: static;
-        margin-top: 5rem;
-        margin-bottom: 1rem;
-        background-color: #807f7f5c;
-        backdrop-filter: blur( 11.5px );
-        border-radius: 20px;
-        padding-right: 1rem;
+  .container_temperatura {
+    position: static;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    background-color: #807f7f5c;
+    backdrop-filter: blur(11.5px);
+    border-radius: 20px;
+    padding-right: 1rem;
+  }
 
-        
-    } 
+  .container_informacoes {
+    position: static;
+    margin: 0;
+  }
 
-    .container_informacoes{
-        position: static;
-        margin:0;
-        
-    }
-  
+  #container_temperatura_ventilacao{
+    position: relative;
+    bottom: 15rem;
+    right: 0;
+    
+   
+  }
 }
