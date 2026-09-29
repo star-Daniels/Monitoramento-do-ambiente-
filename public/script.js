@@ -51,11 +51,7 @@ onValue(ambienteRef, (snapshot) => {
     document.getElementById("temperatura").textContent = temperatura +"°"
     document.getElementById("umidade").textContent = umidade + "%"
     document.getElementById("hci").textContent = hci.toFixed(1);
-    
-    
-
-
-    
+   
 
     if(temperatura < 10){
         document.getElementById("temperatura_aviso").textContent = "Frio"
@@ -102,11 +98,6 @@ onValue(ambienteRef, (snapshot) => {
         
     }
 
-    
-
-   
-
-    
 });
 
 botaoAr.addEventListener("click", () => {

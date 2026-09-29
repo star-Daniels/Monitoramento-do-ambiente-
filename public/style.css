@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ h2,p,button {
   font-family: "Hammersmith One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  
 }
 
 .container_main {
@@ -62,14 +65,13 @@ h2,p,button {
 .informacoes {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
+
+
 .text_informacao {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  min-width: 5rem;
+  margin: 0.5rem 2.2rem;
+  
 }
 
 .container_btn {
@@ -83,18 +85,18 @@ h2,p,button {
 
 .btn_ventilacao {
   padding: 1rem;
-  width: 10rem;
+  width: 11rem;
   margin-top: 1rem;
 
-  background-color: #0d0d0d32;
+  background-color: #31313132;
 
   backdrop-filter: blur(13.5px);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid #ffffff13;
 }
 
 .btn_ventilacao:hover {
-  background-color: #1919192a;
+  background-color: #19191931;
 }
 
 #container_temperatura_ventilacao{
@@ -113,8 +115,9 @@ h2,p,button {
 
 #temperatura_ventilacao{
     background-color: #0d0d0d32;
-    color: #bababa;
+    color: #ffffff;
     padding: 0rem;
+    font-family: "Hammersmith One", sans-serif;
     backdrop-filter: blur(13.5px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.073);
