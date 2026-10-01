@@ -43,10 +43,10 @@ onValue(ambienteRef, (snapshot) => {
     estadoAtual = dados.ar
 
     const hci =
-    -8.784 +
-    1.611 * temperatura +
-    2.338 * umidade-
-    0.1461 * temperatura * umidade;
+        -8.784 +
+        1.611 * temperatura +
+        2.338 * umidade-
+        0.1461 * temperatura * umidade;
 
     document.getElementById("temperatura").textContent = temperatura +"°"
     document.getElementById("umidade").textContent = umidade + "%"
